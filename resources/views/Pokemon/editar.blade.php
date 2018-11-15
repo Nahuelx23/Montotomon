@@ -10,7 +10,7 @@
     <input type="number" name="weight" value="{{ $poke->weight }}">
     <input type="number" name="height" value="{{ $poke->height }}">
     <input type="number" name="evolves" value="{{ $poke->evolves }}">
-    
+    <input type="number" name="type_id" value="{{ $poke->type_id }}">
 
     <button type="submit">Editar</button>
 

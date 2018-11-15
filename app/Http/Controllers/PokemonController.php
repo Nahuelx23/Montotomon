@@ -26,7 +26,7 @@ class PokemonController extends Controller
      */
     public function nuevo()// Agregar un nuevo Pokémon
     {
-        //
+        return view("Pokemon.create");
     }
 
     /**
@@ -37,7 +37,28 @@ class PokemonController extends Controller
      */
     public function guardar(Request $request)// Agregar un nuevo Pokémon
     {
-        //
+        $mensajes = [ 
+            'required' => "Hay campos vacios"
+        ];
+    
+        $validacion = [
+            'name' => 'required',
+            'weight' => 'required',
+            'height' => 'required',
+            'evolves' => 'required'
+        ];
+
+        $this->validate($request, $validacion, $mensajes);
+
+        $pokemon = Pokemon::create([
+            "name" => $request->input('name'),
+            "weight" => $request->input('weight'),
+            "height" => $request->input('height'),
+            "evolves" => $request->input('evolves'),
+            "type_id" => $request->input('type_id')
+        ]); 
+
+        return redirect('/pokemon/nuevo');
     }
 
     /**
@@ -82,6 +103,7 @@ class PokemonController extends Controller
         $pokemon->weight = $request->input('weight');
         $pokemon->height = $request->input('height');
         $pokemon->evolves = $request->input('evolves');
+        $pokemon->type_id = $request->input('type_id');
     
         $pokemon->save();
        

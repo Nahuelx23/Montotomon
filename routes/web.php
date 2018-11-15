@@ -19,7 +19,7 @@ Route::prefix('pokemon')->name('pokemon.')->group(function () {
      // localhost/pokemon/nuevo
      Route::get('/nuevo','PokemonController@nuevo')->name('nuevo');
      // localhost/pokemon/nuevo
-     Route::post('/','PokemonController@guardar')->name('guardar');
+     Route::post('nuevo','PokemonController@guardar')->name('guardar');
      // localhost/pokemon/{id}
      Route::get('/{pokemon}','PokemonController@uno')->name('uno');
      // localhost/pokemon/{id}/editar

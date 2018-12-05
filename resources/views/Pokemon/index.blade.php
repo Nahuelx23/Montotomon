@@ -21,4 +21,7 @@
 @endforeach
 
 </section>
+
+<hr>
+<div class=""><a href="/pokemon/nuevo">Crear Pokemon</a></div>
 @endsection

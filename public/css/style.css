@@ -24,6 +24,15 @@ html, body {
     background-color: beige;
 }
 
+/* .FondoEdit{
+    background-image: url("../2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+    
+    height: 100vh;
+} */
+
 .comp_logo{
     display: flex;
     align-items: center;

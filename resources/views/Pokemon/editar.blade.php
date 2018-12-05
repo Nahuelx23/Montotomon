@@ -1,7 +1,7 @@
 @extends('Template.basic')
 
 @section('content') 
-
+<main class="FondoEdit">
 <form action="/pokemon/{{ $poke->id }}" method="post">
 
     @csrf
@@ -25,6 +25,6 @@
 
 </form>
 
-
+</main>
 @endsection
 

@@ -1,9 +1,17 @@
+*{ box-sizing: border-box; }
+a{text-decoration: none;}
+
 html, body {
     background-color: #fff;
+    /* background-image: url("../2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; */
+
     color: #636b6f;
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin: 0;
 }
 
@@ -11,7 +19,9 @@ html, body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; 
+
+    background-color: beige;
 }
 
 .comp_logo{
@@ -30,7 +40,7 @@ html, body {
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 0pc 15px;
+    padding: 0px 15px;
 }
 
 .main-nav_links,
@@ -52,6 +62,7 @@ footer>ul a{
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    
 }
 
 .title {
@@ -87,6 +98,73 @@ footer a{
 footer .comp_logo{
     font-size: 0.7em;
     color:white;
+}
+.FondoPokemons{
+    background-color: antiquewhite;
+}
+.ListPoke{
+    display: flex;
+    flex-wrap: wrap;
+/* background-color: RED;
+height: 100VH; */
+    /* justify-content: space-around; */
+    justify-content: center;
+    /* max-width: 1100px; */
+    
+    margin: 0 auto;
+}
+
+.ListPoke ul{
+    padding-left: 0;
+}
+
+.ListPoke ul li{
+    list-style: none;
+    font-weight: bold;
+    padding: 0;
+}
+
+.TarjetPoke a{
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: antiquewhite;
+    color: black;
+
+    
+}
+
+.TarjetPoke a:hover{
+    background-color: rgb(222, 231, 216);
+}
+
+.TarjetPoke{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;  
+
+    padding: 10px 30px;
+    margin: 15px 15px;
+    background-color: beige;
+    text-align: center;
+
+    width: 300px;
+}
+
+.InfoPoke{
+    margin-left: 20px;
+    text-align: center;
+    /* padding: 0 30px; */
+}
+
+.FondoImgPoke{
+    padding: 15px 15px 12px 15px;
+    background-color: white;
+    border-radius: 50%;
+    /* height: 100px; */
+}
+
+.idP{
+    float: left;
 }
 
 @media screen and (min-width: 640px){

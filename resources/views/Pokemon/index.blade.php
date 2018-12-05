@@ -1,14 +1,24 @@
 @extends("Template.basic")
 
 @section('content')
-<ul>
+<section class="ListPoke">
+
 @foreach($Pokemons as $poke)
-    <li> 
-        <a href="/pokemon/{{$poke->id}}">  
-            <img src="{{ asset('poke-img/images/poke-'.$poke->id.'.jpg') }}" alt="Icono de {{ $poke->name }}">
-            {{$poke->name}} 
-        </a>
-    </li>
+<article class="TarjetPoke">
+    <div class="FondoImgPoke">
+        <img src="{{ asset('poke-img/images/poke-'.$poke->id.'.jpg') }}" alt="Icono de {{ $poke->name }}">
+    </div>
+
+    <div class="InfoPoke">
+        <!-- <p class="idP">{{$poke->id}}</p> -->
+        <ul>
+            <li>{{$poke->name}}</li>
+        </ul>
+
+        <a href="/pokemon/{{$poke->id}}">Info</a>
+    </div>
+</article>
 @endforeach
-</ul>
+
+</section>
 @endsection

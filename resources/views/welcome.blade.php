@@ -1,6 +1,7 @@
 @extends('Template.basic')
 
 @section('content')
+
 <div class="content">
     <div class="title m-b-md">
         Laramon

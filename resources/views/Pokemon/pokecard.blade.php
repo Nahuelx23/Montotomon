@@ -1,3 +1,6 @@
+@extends("Template.basic")
+
+@section('content')
 <a href="{{ route('pokemon.uno',['pokemon' => $poke->id]) }}">
   <article class="poke {{ $tipo->name }}">
   <img src="{{ asset('poke-img/images/poke-'.$poke->id.'.jpg') }}" alt="Icono de {{ $poke->name }}">
@@ -28,3 +31,5 @@
 <a href="/pokemon/">Ir atras</a>
 
 <a href="/">Inicio</a>
+
+@endsection
